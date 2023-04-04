@@ -1,13 +1,12 @@
 body{
     background-color: var(--black-color);
     height: 100vh;
-    max-width: 100vw;
 
     display: grid;
     grid: 'cabecalho'
           'principal'
           'rodape';
-    place-items: center;
+    /* place-items: center; */
 }
 
 /* HEADER */
@@ -19,6 +18,8 @@ body{
     text-align: center;
     
     width: 100%;
+    padding: 1rem 0 0 0;
+    border-bottom: solid 0.1rem var(--white-color);
 }
 
 .header .logo-image img{
@@ -49,8 +50,8 @@ body{
 .container{
     background: url(../images/background-general/stars-8.png) no-repeat;
     background-size: cover;
-    border-top: solid 0.1rem var(--white-color);
-    border-bottom: solid 0.1rem var(--white-color);
+    /* border-top: solid 0.1rem var(--white-color);
+    border-bottom: solid 0.1rem var(--white-color); */
 
     grid-area: principal;
     display: flex;
@@ -60,8 +61,8 @@ body{
     
     width: 100%;
     height: 100%;
+    padding: 4rem 0;
     gap: 4rem;
-    margin: 8rem 0rem;
 }
 
 .container .gener-title{
@@ -81,7 +82,7 @@ body{
 
     width: 40rem;
     height: 27rem;
-    border: solid 0.2rem var(--white-color);
+    border: solid 0.1rem var(--white-color);
 }
 
 .adventure-slider{
@@ -129,6 +130,13 @@ body{
 /* FOOTER */
 .footer{
     grid-area: rodape;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    border-top: solid 0.1rem var(--white-color);
+    padding: 4rem 0 2rem 0;
 }
 
 .footer .footer-menu{
@@ -141,5 +149,46 @@ body{
 }
 
 .footer .footer-menu li a:hover{
+    color: var(--dark-red-color);
+}
+
+/* MEDIA */
+.contacts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 1rem 0 3rem 0;
+}
+
+.contacts .social{
+    margin-right: 10rem;
+}
+
+.contacts .social p{
+    padding: 0.5rem 0;
+}
+
+.contacts .social .email{
+    font-size: 1.7rem;
+    color: var(--white-color);
+}
+
+.contacts .social .telephone{
+    font-size: 1.7rem;
+    color: var(--white-color);
+}
+
+.contacts .social-media .nets{
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts .social-media .nets li{
+    font-size: 1.7rem;
+    padding: 0.5rem 0;
+}
+
+.contacts .social-media .nets li a:hover{
     color: var(--dark-red-color);
 }
