@@ -1,0 +1,82 @@
+// MOVIES IMAGE ARRAY
+const adventuresMoviesImages = [
+    "./src/images/movies/star-wars-I.jpg",
+    "./src/images/movies/star-wars-II.jpg",
+    "./src/images/movies/star-wars-III.jpg",
+    "./src/images/movies/star-wars-IV.jpg",
+    "./src/images/movies/star-wars-han-solo.jpg",
+    "./src/images/movies/star-wars-rogue-one.jpg",
+    "./src/images/movies/star-wars-V.png",
+    "./src/images/movies/star-wars-VI.jpg",
+    "./src/images/movies/star-wars-VII.jpg",
+    "./src/images/movies/star-wars-VIII.jpg",
+    "./src/images/movies/star-wars-IX.jpg"
+];
+
+// INDEX
+let adventureMoviesImagesIndex = 0;
+
+// ARROWS
+const adventureBackArrow = document.getElementById("back-arrow");
+console.log(adventureBackArrow);
+const adventureForwardArrow = document.getElementById("forward-arrow");
+console.log(adventureForwardArrow);
+
+// SLIDER
+const adventureSlider = document.getElementById("adventure-slider");
+
+// IMG
+const adventureImg = document.getElementById("adventure-image");
+
+// FUNCTIONS
+function showMovieImage(){
+    adventureImg.src = adventuresMoviesImages[adventureMoviesImagesIndex];
+    console.log(adventureImg);
+};
+
+function hideForwardArrow(){
+    const ehAUltimaImagem = adventureMoviesImagesIndex !== 0 && adventureMoviesImagesIndex === adventuresMoviesImages.length - 1;
+    if(ehAUltimaImagem){
+        adventureForwardArrow.classList.add("opacity");
+    }else{
+        adventureForwardArrow.classList.remove("opacity");
+    }
+
+    const hideForwardArrow = adventureForwardArrow;
+};
+
+function hideBackArrow(){
+    const naoEhAPrimeiraImagem = adventureMoviesImagesIndex !== 0
+    if(naoEhAPrimeiraImagem){
+        adventureBackArrow.classList.remove("opacity");
+    }else{
+        adventureBackArrow.classList.add("opacity");
+    };
+};
+
+// ADDEVENTLISTENNER
+adventureBackArrow.addEventListener('click', () => {
+    if(adventureMoviesImagesIndex === 0){
+        return;
+    };
+
+    adventureMoviesImagesIndex --;
+    console.log(adventureMoviesImagesIndex);
+    showMovieImage();
+    hideForwardArrow();
+    hideBackArrow();
+});
+
+adventureForwardArrow.addEventListener('click', () => {
+    if(adventureMoviesImagesIndex === adventuresMoviesImages.length - 1){
+        return;
+    };
+
+    adventureMoviesImagesIndex ++;
+    console.log(adventureMoviesImagesIndex);
+    showMovieImage();
+    hideForwardArrow();
+    hideBackArrow();
+});
+
+showMovieImage();
