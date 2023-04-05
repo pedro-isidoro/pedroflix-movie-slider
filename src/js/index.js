@@ -28,6 +28,9 @@ console.log(adventureBackArrow);
 const adventureForwardArrow = document.getElementById("forward-arrow");
 console.log(adventureForwardArrow);
 
+// MOVIES
+const adventureMovies = document.getElementsByClassName("adventure-movies");
+
 // SLIDER
 const adventureSlider = document.getElementById("adventure-slider");
 
@@ -37,7 +40,7 @@ const adventureImg = document.getElementById("adventure-image");
 // FUNCTIONS
 function changeBackgroundImage(){
     if(adventureMoviesImagesIndex === 11){
-        
+        adventureMovies.style.backgroundImage = "url(./src/images/background-movies/hobbit.jpg)";
     };
 };
 
@@ -53,8 +56,6 @@ function hideForwardArrow(){
     }else{
         adventureForwardArrow.classList.remove("opacity");
     }
-
-    const hideForwardArrow = adventureForwardArrow;
 };
 
 function hideBackArrow(){
@@ -77,6 +78,7 @@ adventureBackArrow.addEventListener('click', () => {
     showMovieImage();
     hideForwardArrow();
     hideBackArrow();
+    changeBackgroundImage();
 });
 
 adventureForwardArrow.addEventListener('click', () => {
@@ -89,6 +91,7 @@ adventureForwardArrow.addEventListener('click', () => {
     showMovieImage();
     hideForwardArrow();
     hideBackArrow();
+    changeBackgroundImage();
 });
 
 showMovieImage();
