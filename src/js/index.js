@@ -10,7 +10,13 @@ const adventuresMoviesImages = [
     "./src/images/movies/star-wars-VI.jpg",
     "./src/images/movies/star-wars-VII.jpg",
     "./src/images/movies/star-wars-VIII.jpg",
-    "./src/images/movies/star-wars-IX.jpg"
+    "./src/images/movies/star-wars-IX.jpg",
+    "./src/images/movies/Hobbit-1.jpg",
+    "./src/images/movies/Hobbit-2.jpg",
+    "./src/images/movies/Hobbit-3.jpg",
+    "./src/images/movies/o-senhor-dos-aneis-1.jpg",
+    "./src/images/movies/o-senhor-dos-aneis-2.jpg",
+    "./src/images/movies/o-senhor-dos-aneis-3.jpg",
 ];
 
 // INDEX
@@ -29,6 +35,12 @@ const adventureSlider = document.getElementById("adventure-slider");
 const adventureImg = document.getElementById("adventure-image");
 
 // FUNCTIONS
+function changeBackgroundImage(){
+    if(adventureMoviesImagesIndex === 11){
+        
+    };
+};
+
 function showMovieImage(){
     adventureImg.src = adventuresMoviesImages[adventureMoviesImagesIndex];
     console.log(adventureImg);
