@@ -83,6 +83,7 @@ body{
     width: 40rem;
     height: 27rem;
     border: solid 0.1rem var(--white-color);
+    transition: 0.5s ease-in-out;
 }
 
 .adventure-slider{

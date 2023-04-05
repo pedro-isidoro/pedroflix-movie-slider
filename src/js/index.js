@@ -29,7 +29,7 @@ const adventureForwardArrow = document.getElementById("forward-arrow");
 console.log(adventureForwardArrow);
 
 // MOVIES
-const adventureMovies = document.getElementsByClassName("adventure-movies");
+const adventureMovies = document.getElementById("adventure-movies");
 
 // SLIDER
 const adventureSlider = document.getElementById("adventure-slider");
@@ -38,12 +38,6 @@ const adventureSlider = document.getElementById("adventure-slider");
 const adventureImg = document.getElementById("adventure-image");
 
 // FUNCTIONS
-function changeBackgroundImage(){
-    if(adventureMoviesImagesIndex === 11){
-        adventureMovies.style.backgroundImage = "url(./src/images/background-movies/hobbit.jpg)";
-    };
-};
-
 function showMovieImage(){
     adventureImg.src = adventuresMoviesImages[adventureMoviesImagesIndex];
     console.log(adventureImg);
@@ -67,6 +61,16 @@ function hideBackArrow(){
     };
 };
 
+function changeBackgroundImage(){
+    if(adventureMoviesImagesIndex === 11){
+        adventureMovies.style.backgroundImage = "url(./src/images/background-movies/hobbit.jpg)";
+    }else if(adventureMoviesImagesIndex === 10){
+        adventureMovies.style.backgroundImage = "url(./src/images/background-movies/death-star.jpg)";
+    }else{
+        return;
+    };
+};
+
 // ADDEVENTLISTENNER
 adventureBackArrow.addEventListener('click', () => {
     if(adventureMoviesImagesIndex === 0){
@@ -75,6 +79,7 @@ adventureBackArrow.addEventListener('click', () => {
 
     adventureMoviesImagesIndex --;
     console.log(adventureMoviesImagesIndex);
+
     showMovieImage();
     hideForwardArrow();
     hideBackArrow();
@@ -88,6 +93,7 @@ adventureForwardArrow.addEventListener('click', () => {
 
     adventureMoviesImagesIndex ++;
     console.log(adventureMoviesImagesIndex);
+
     showMovieImage();
     hideForwardArrow();
     hideBackArrow();
