@@ -74,7 +74,14 @@ body{
 .adventure-movies{
     background: url(../images/background-movies/death-star.jpg) no-repeat;
     background-size: cover;
+}
 
+/* .action-movies{
+    background: url() no-repeat;
+    background-size: cover;
+} */
+
+.adventure-movies, .action-movies{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,13 +93,13 @@ body{
     transition: 0.5s ease-in-out;
 }
 
-.adventure-slider{
+.adventure-slider, .action-slider{
     position: absolute;
     display: flex;
     gap: 5rem;
 }
 
-.adventure-image{
+.adventure-image, .action-image{
     width: 16rem;
     height: 22rem;
 }
