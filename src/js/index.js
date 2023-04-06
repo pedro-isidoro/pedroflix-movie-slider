@@ -49,13 +49,13 @@ const actionSlider = document.getElementById("action-slider");
 const adventureImg = document.getElementById("adventure-image");
 const actionImg = document.getElementById("action-image");
 
-// FUNCTIONS
-function showMovieImage(){
+// ADVENTURE FUNCTIONS
+function adventureShowMovieImage(){
     adventureImg.src = adventuresMoviesImages[adventureMoviesImagesIndex];
     console.log(adventureImg);
 };
 
-function hideForwardArrow(){
+function adventureHideForwardArrow(){
     const ehAUltimaImagem = adventureMoviesImagesIndex !== 0 && adventureMoviesImagesIndex === adventuresMoviesImages.length - 1;
     if(ehAUltimaImagem){
         adventureForwardArrow.classList.add("opacity");
@@ -64,7 +64,7 @@ function hideForwardArrow(){
     }
 };
 
-function hideBackArrow(){
+function adventureHideBackArrow(){
     const naoEhAPrimeiraImagem = adventureMoviesImagesIndex !== 0
     if(naoEhAPrimeiraImagem){
         adventureBackArrow.classList.remove("opacity");
@@ -73,7 +73,7 @@ function hideBackArrow(){
     };
 };
 
-function changeBackgroundImage(){
+function adventureChangeBackgroundImage(){
     if(adventureMoviesImagesIndex === 11){
         adventureMovies.style.backgroundImage = "url(./src/images/background-movies/hobbit.jpg)";
     }else if(adventureMoviesImagesIndex === 10){
@@ -92,10 +92,10 @@ adventureBackArrow.addEventListener('click', () => {
     adventureMoviesImagesIndex --;
     console.log(adventureMoviesImagesIndex);
 
-    showMovieImage();
-    hideForwardArrow();
-    hideBackArrow();
-    changeBackgroundImage();
+    adventureShowMovieImage();
+    adventureHideForwardArrow();
+    adventureHideBackArrow();
+    adventureChangeBackgroundImage();
 });
 
 adventureForwardArrow.addEventListener('click', () => {
@@ -106,10 +106,75 @@ adventureForwardArrow.addEventListener('click', () => {
     adventureMoviesImagesIndex ++;
     console.log(adventureMoviesImagesIndex);
 
-    showMovieImage();
-    hideForwardArrow();
-    hideBackArrow();
-    changeBackgroundImage();
+    adventureShowMovieImage();
+    adventureHideForwardArrow();
+    adventureHideBackArrow();
+    adventureChangeBackgroundImage();
 });
 
-showMovieImage();
+// ADVENTURE FUNCTIONS
+function actionShowMovieImage(){
+    actionImg.src = actionsMoviesImages[actionMoviesImagesIndex];
+    console.log(actionImg);
+};
+
+function actionHideForwardArrow(){
+    const ehAUltimaImagem = actionMoviesImagesIndex !== 0 && actionMoviesImagesIndex === actionsMoviesImages.length - 1;
+    if(ehAUltimaImagem){
+        actionForwardArrow.classList.add("opacity");
+    }else{
+        actionForwardArrow.classList.remove("opacity");
+    }
+};
+
+function actionHideBackArrow(){
+    const naoEhAPrimeiraImagem = actionMoviesImagesIndex !== 0
+    if(naoEhAPrimeiraImagem){
+        actionBackArrow.classList.remove("opacity");
+    }else{
+        actionBackArrow.classList.add("opacity");
+    };
+};
+
+// function actionChangeBackgroundImage(){
+//     if(actionMoviesImagesIndex === 11){
+//         adventureMovies.style.backgroundImage = "url(./src/images/background-movies/hobbit.jpg)";
+//     }else if(adventureMoviesImagesIndex === 10){
+//         adventureMovies.style.backgroundImage = "url(./src/images/background-movies/death-star.jpg)";
+//     }else{
+//         return;
+//     };
+// };
+
+// ADDEVENTLISTENNER
+actionBackArrow.addEventListener('click', () => {
+    if(actionMoviesImagesIndex === 0){
+        return;
+    };
+
+    actionMoviesImagesIndex --;
+    console.log(actionMoviesImagesIndex);
+
+    actionShowMovieImage();
+    actionHideForwardArrow();
+    actionHideBackArrow();
+    actionChangeBackgroundImage();
+});
+
+actionForwardArrow.addEventListener('click', () => {
+    if(actionMoviesImagesIndex === actionsMoviesImages.length - 1){
+        return;
+    };
+
+    actionMoviesImagesIndex ++;
+    console.log(actionMoviesImagesIndex);
+
+    actionShowMovieImage();
+    actionHideForwardArrow();
+    actionHideBackArrow();
+    actionChangeBackgroundImage();
+});
+
+// SHOW INITIAL IMAGES
+adventureShowMovieImage();
+actionShowMovieImage();
