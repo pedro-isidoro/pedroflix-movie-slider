@@ -20,11 +20,11 @@ const adventuresMoviesImages = [
 ];
 
 const actionsMoviesImages = [
-    "./src/images/capitao-america-o-primeiro-vingador.jpg",
-    "./src/images/capita-marvel.jpg",
-    "./src/images/homem-de-ferro.jpg",
-    "./src/images/o-incrivel-hulk.jpg",   
-    "./src/images/homem-de-ferro-2.jpg",
+    "./src/images/movies/capitao-america-o-primeiro-vingador.jpg",
+    "./src/images/movies/capita-marvel.jpg",
+    "./src/images/movies/homem-de-ferro.jpg",
+    "./src/images/movies/o-incrivel-hulk.jpg",   
+    "./src/images/movies/homem-de-ferro-2.png",
 ];
 
 // INDEX
@@ -112,7 +112,7 @@ adventureForwardArrow.addEventListener('click', () => {
     adventureChangeBackgroundImage();
 });
 
-// ADVENTURE FUNCTIONS
+// ACTION FUNCTIONS
 function actionShowMovieImage(){
     actionImg.src = actionsMoviesImages[actionMoviesImagesIndex];
     console.log(actionImg);
@@ -158,7 +158,7 @@ actionBackArrow.addEventListener('click', () => {
     actionShowMovieImage();
     actionHideForwardArrow();
     actionHideBackArrow();
-    actionChangeBackgroundImage();
+    // actionChangeBackgroundImage();
 });
 
 actionForwardArrow.addEventListener('click', () => {
@@ -172,7 +172,7 @@ actionForwardArrow.addEventListener('click', () => {
     actionShowMovieImage();
     actionHideForwardArrow();
     actionHideBackArrow();
-    actionChangeBackgroundImage();
+    // actionChangeBackgroundImage();
 });
 
 // SHOW INITIAL IMAGES
