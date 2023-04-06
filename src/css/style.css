@@ -76,10 +76,10 @@ body{
     background-size: cover;
 }
 
-/* .action-movies{
-    background: url() no-repeat;
+.action-movies{
+    background: url(../images/background-movies/marvel-background.jpg) no-repeat;
     background-size: cover;
-} */
+}
 
 .adventure-movies, .action-movies{
     display: flex;

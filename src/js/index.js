@@ -19,6 +19,14 @@ const adventuresMoviesImages = [
     "./src/images/movies/o-senhor-dos-aneis-3.jpg",
 ];
 
+const actionsMoviesImages = [
+    "./src/images/capitao-america-o-primeiro-vingador.jpg",
+    "./src/images/capita-marvel.jpg",
+    "./src/images/homem-de-ferro.jpg",
+    "./src/images/o-incrivel-hulk.jpg",   
+    "./src/images/homem-de-ferro-2.jpg",
+];
+
 // INDEX
 let adventureMoviesImagesIndex = 0;
 
