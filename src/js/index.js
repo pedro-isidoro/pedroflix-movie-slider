@@ -25,6 +25,10 @@ const actionsMoviesImages = [
     "./src/images/movies/homem-de-ferro.jpg",
     "./src/images/movies/o-incrivel-hulk.jpg",   
     "./src/images/movies/homem-de-ferro-2.png",
+    "./src/images/movies/thor.jpg",
+    "./src/images/movies/the-avengers.jpg",
+    "./src/images/movies/thor-2.jpg",
+    "./src/images/movies/homem-de-ferro-3.jpg",
 ];
 
 // INDEX
