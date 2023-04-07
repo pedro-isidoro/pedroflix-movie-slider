@@ -33,6 +33,10 @@ const actionsMoviesImages = [
     "./src/images/movies/guardioes-da-galaxia.jpg",
     "./src/images/movies/guardioes-da-galaxia-2.jpg",
     "./src/images/movies/vingadores-2.jpg",
+    "./src/images/movies/homem-formiga.jpg",
+    "./src/images/movies/capitao-america-3.jpg",
+    "./src/images/movies/viuva-negra.jpg",
+    "./src/images/movies/pantera-negra.jpg",
 ];
 
 // INDEX
