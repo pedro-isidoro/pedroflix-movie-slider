@@ -16,7 +16,7 @@ const adventuresMoviesImages = [
     "./src/images/movies/adventure/Hobbit-3.jpg",
     "./src/images/movies/adventure/o-senhor-dos-aneis-1.jpg",
     "./src/images/movies/adventure/o-senhor-dos-aneis-2.jpg",
-    "./src/images/movies/adventure/o-senhor-dos-aneis-3.jpg",
+    "./src/images/movies/adventure/o-senhor-dos-aneis-3.jpg"
 ];
 
 const actionsMoviesImages = [
@@ -48,6 +48,9 @@ const actionsMoviesImages = [
     "./src/images/movies/action/homem-aranha-2.jpg",
     "./src/images/movies/action/homem-aranha-3.jpg",
     "./src/images/movies/action/doutor-estranho-2.jpg",
+    "./src/images/movies/action/homem-formiga-3.jpg",
+    "./src/images/movies/action/pantera-negra-2.jpg",
+    "./src/images/movies/action/thor-4.jpg"
 ];
 
 // INDEX
