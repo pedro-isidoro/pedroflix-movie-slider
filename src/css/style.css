@@ -154,6 +154,12 @@ body{
 
 .footer .footer-menu li{
     font-size: 2rem;
+
+    padding: 0 0.4rem;
+}
+
+.footer .footer-menu li a{
+    padding: 0.8rem 1.2rem;
 }
 
 .footer .footer-menu li a:hover{
