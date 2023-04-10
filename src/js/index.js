@@ -67,10 +67,6 @@ const actionForwardArrow = document.getElementById("forward-arrow-1");
 const adventureMovies = document.getElementById("adventure-movies");
 const actionMovies = document.getElementById("action-movies");
 
-// SLIDER
-const adventureSlider = document.getElementById("adventure-slider");
-const actionSlider = document.getElementById("action-slider");
-
 // IMG
 const adventureImg = document.getElementById("adventure-image");
 const actionImg = document.getElementById("action-image");
