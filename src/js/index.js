@@ -45,6 +45,9 @@ const actionsMoviesImages = [
     "./src/images/movies/action/vingadores-4.jpg",
     "./src/images/movies/action/shang-chi.jpg",
     "./src/images/movies/action/eternos.jpg",
+    "./src/images/movies/action/homem-aranha-2.jpg",
+    "./src/images/movies/action/homem-aranha-3.jpg",
+    "./src/images/movies/action/doutor-estranho-2.jpg",
 ];
 
 // INDEX
