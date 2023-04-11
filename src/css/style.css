@@ -9,6 +9,10 @@ body{
     /* place-items: center; */
 }
 
+span{
+    color: var(--light-red-color);
+}
+
 /* HEADER */
 .header{
     grid-area: cabecalho;
@@ -174,7 +178,7 @@ body{
     align-items: center;
     justify-content: center;
 
-    margin: 1rem 0 3rem 0;
+    margin: 1rem 0 2rem 0;
 }
 
 .contacts .social{

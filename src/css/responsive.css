@@ -1,3 +1,45 @@
-@media(max-width: 510px){
+@media(max-width: 491px){
+    /* FOOTER */
+    /* MEDIA */
+    .contacts{
+        margin: 1rem 0 2rem 0;
+    }
 
+    .contacts .social{
+        margin-right: 7rem;
+    }
+}
+
+@media(max-width: 455px){
+    /* FOOTER */
+    /* MEDIA */
+    .contacts{
+        margin: 1rem 0 2rem 0;
+    }
+
+    .contacts .social{
+        margin-right: 5rem;
+    }
+}
+
+@media(max-width: 425px){
+    /* FOOTER */
+    /* MEDIA */
+    .contacts{
+        flex-direction: column;
+        margin: 1rem 0 2rem 0;
+    }
+
+    .contacts .social{
+        margin: 1rem 0 2rem 0;
+    }
+
+    .contacts .social-media .nets{
+        flex-direction: row;
+    }
+
+    .contacts .social-media .nets li{
+        font-size: 1.7rem;
+        padding: 0.5rem 1rem;
+    }
 }
