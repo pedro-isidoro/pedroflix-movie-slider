@@ -44,6 +44,8 @@ body{
 
 .header .menu li a:hover{
     color: var(--dark-red-color);
+    background-color: #312260;
+    border-radius: 2rem;
 }
 
 /* CONTAINER */
