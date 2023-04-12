@@ -22,7 +22,8 @@ Além de fazer esse site ser responsivo.
 <br>
 
 ## Métodos
-Foi usado display grip juntamente com display flex, para melhor agrupamento e controle das seções da Landing Page e suas tags.
+Foi usado display grid juntamente com display flex, para um melhor agrupamento e controle das seções da Landing Page e suas tags.
+Para o JavaScript foi-se criado um array com os endereços das imagens, as quais são chamadas em uma das funções criadas.
 <br>
 <br>
 
