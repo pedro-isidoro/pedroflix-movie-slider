@@ -5,7 +5,7 @@ Onde estarão carrosseis com imagens de filmes, em seus respectivos gêneros.
 <br>
 
 ## Projeto
-<img src='src/images/pedroflix.gif' alt='Gif do projeto'>
+<img src='src/images/pedroflix-2.gif' alt='Gif do projeto'>
 <br>
 <br>
 
@@ -19,7 +19,6 @@ Além de fazer esse site ser responsivo.
 - HTML
 - CSS
 - JS
-<br>
 <br>
 
 ## Métodos
