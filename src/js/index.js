@@ -1,4 +1,5 @@
-import { showMovieImage, hideForwardArrow, hideBackArrow, changeBackgroundFutureImage, changeBackgroundPastImage } from './functions.js';
+import {showMovieImage, hideForwardArrow, hideBackArrow, changeBackgroundFutureAdventureImage, changeBackgroundPastAdventureImage} from './functions.js'
+// const showMovieImage = require('./functions.js')
 
 // MOVIES IMAGE ARRAY
 const adventuresMoviesImages = [
@@ -21,7 +22,7 @@ const adventuresMoviesImages = [
     "./src/images/movies/adventure/o-senhor-dos-aneis-3.jpg"
 ];
 
-const actionsMoviesImages = [
+const actionMoviesImages = [
     "./src/images/movies/action/capitao-america-o-primeiro-vingador.jpg",
     "./src/images/movies/action/capita-marvel.jpg",
     "./src/images/movies/action/homem-de-ferro.jpg",
@@ -67,13 +68,13 @@ const actionForwardArrow = document.getElementById("forward-arrow-1");
 
 // MOVIES
 const adventureMovies = document.getElementById("adventure-movies");
-const actionMovies = document.getElementById("action-movies");
+// const actionMovies = document.getElementById("action-movies");
 
 // IMG
 const adventureImg = document.getElementById("adventure-image");
 const actionImg = document.getElementById("action-image");
 
-// ADDEVENTLISTENNER
+// ADDEVENTLISTENNER - ADVENTURE
 adventureBackArrow.addEventListener('click', () => {
     if(adventureMoviesImagesIndex === 0){
         return;
@@ -82,10 +83,10 @@ adventureBackArrow.addEventListener('click', () => {
     adventureMoviesImagesIndex --;
     console.log(adventureMoviesImagesIndex);
 
-    adventureShowMovieImage();
-    adventureHideForwardArrow();
-    adventureHideBackArrow();
-    adventureChangeBackgroundImage();
+    showMovieImage(adventureImg, adventuresMoviesImages, adventureMoviesImagesIndex);
+    hideBackArrow(adventureMoviesImagesIndex, adventureBackArrow);
+    hideForwardArrow(adventureMoviesImagesIndex, adventuresMoviesImages, adventureForwardArrow);
+    changeBackgroundPastAdventureImage(adventureMoviesImagesIndex, adventureMovies);
 });
 
 adventureForwardArrow.addEventListener('click', () => {
@@ -96,13 +97,13 @@ adventureForwardArrow.addEventListener('click', () => {
     adventureMoviesImagesIndex ++;
     console.log(adventureMoviesImagesIndex);
 
-    adventureShowMovieImage();
-    adventureHideForwardArrow();
-    adventureHideBackArrow();
-    adventureChangeBackgroundImage();
+    showMovieImage(adventureImg, adventuresMoviesImages, adventureMoviesImagesIndex);
+    hideForwardArrow(adventureMoviesImagesIndex, adventuresMoviesImages, adventureForwardArrow);
+    hideBackArrow(adventureMoviesImagesIndex, adventureBackArrow);
+    changeBackgroundFutureAdventureImage(adventureMoviesImagesIndex, adventureMovies);
 });
 
-// ADDEVENTLISTENNER
+// ADDEVENTLISTENNER - ACTION
 actionBackArrow.addEventListener('click', () => {
     if(actionMoviesImagesIndex === 0){
         return;
@@ -111,26 +112,26 @@ actionBackArrow.addEventListener('click', () => {
     actionMoviesImagesIndex --;
     console.log(actionMoviesImagesIndex);
 
-    actionShowMovieImage();
-    actionHideForwardArrow();
-    actionHideBackArrow();
+    showMovieImage(actionImg, actionMoviesImages, actionMoviesImagesIndex);
+    hideBackArrow(actionMoviesImagesIndex, actionBackArrow);
+    hideForwardArrow(actionMoviesImagesIndex, actionMoviesImages, actionForwardArrow);
     // actionChangeBackgroundImage();
 });
 
 actionForwardArrow.addEventListener('click', () => {
-    if(actionMoviesImagesIndex === actionsMoviesImages.length - 1){
+    if(actionMoviesImagesIndex === actionMoviesImages.length - 1){
         return;
     };
 
     actionMoviesImagesIndex ++;
     console.log(actionMoviesImagesIndex);
 
-    actionShowMovieImage();
-    actionHideForwardArrow();
-    actionHideBackArrow();
+    showMovieImage(actionImg, actionMoviesImages, actionMoviesImagesIndex);
+    hideForwardArrow(actionMoviesImagesIndex, actionMoviesImages, actionForwardArrow);
+    hideBackArrow(actionMoviesImagesIndex, actionBackArrow);
     // actionChangeBackgroundImage();
 });
 
 // SHOW INITIAL IMAGES
-adventureShowMovieImage();
-actionShowMovieImage();
+showMovieImage(adventureImg, adventuresMoviesImages, adventureMoviesImagesIndex);
+showMovieImage(actionImg, actionMoviesImages, actionMoviesImagesIndex);
