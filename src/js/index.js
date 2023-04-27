@@ -1,4 +1,4 @@
-import {showMovieImage, hideForwardArrow, hideBackArrow, changeBackgroundFutureAdventureImage, changeBackgroundPastAdventureImage} from './functions.js'
+import {showMovieImage, hideForwardArrow, hideBackArrow, changeBackgroundAdventureImage} from './functions.js'
 // const showMovieImage = require('./functions.js')
 
 // MOVIES IMAGE ARRAY
@@ -86,7 +86,7 @@ adventureBackArrow.addEventListener('click', () => {
     showMovieImage(adventureImg, adventuresMoviesImages, adventureMoviesImagesIndex);
     hideBackArrow(adventureMoviesImagesIndex, adventureBackArrow);
     hideForwardArrow(adventureMoviesImagesIndex, adventuresMoviesImages, adventureForwardArrow);
-    changeBackgroundPastAdventureImage(adventureMoviesImagesIndex, adventureMovies);
+    changeBackgroundAdventureImage(adventureMoviesImagesIndex, adventureMovies);
 });
 
 adventureForwardArrow.addEventListener('click', () => {
@@ -100,7 +100,7 @@ adventureForwardArrow.addEventListener('click', () => {
     showMovieImage(adventureImg, adventuresMoviesImages, adventureMoviesImagesIndex);
     hideForwardArrow(adventureMoviesImagesIndex, adventuresMoviesImages, adventureForwardArrow);
     hideBackArrow(adventureMoviesImagesIndex, adventureBackArrow);
-    changeBackgroundFutureAdventureImage(adventureMoviesImagesIndex, adventureMovies);
+    changeBackgroundAdventureImage(adventureMoviesImagesIndex, adventureMovies);
 });
 
 // ADDEVENTLISTENNER - ACTION
