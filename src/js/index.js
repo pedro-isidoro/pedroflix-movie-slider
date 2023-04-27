@@ -1,5 +1,4 @@
 import {showMovieImage, hideForwardArrow, hideBackArrow, changeBackgroundAdventureImage} from './functions.js'
-// const showMovieImage = require('./functions.js')
 
 // MOVIES IMAGE ARRAY
 const adventuresMoviesImages = [

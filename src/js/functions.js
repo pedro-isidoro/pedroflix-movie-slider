@@ -33,5 +33,3 @@ function changeBackgroundAdventureImage(index, slider) {
 }
 
 export {showMovieImage, hideForwardArrow, hideBackArrow, changeBackgroundAdventureImage};
-
-// module.exports = {showMovieImage, hideForwardArrow, hideBackArrow, changeBackgroundFutureAdventureImage, changeBackgroundPastAdventureImage};
