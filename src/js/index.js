@@ -1,3 +1,5 @@
+import { showMovieImage, hideForwardArrow, hideBackArrow, changeBackgroundFutureImage, changeBackgroundPastImage } from './functions.js';
+
 // MOVIES IMAGE ARRAY
 const adventuresMoviesImages = [
     "./src/images/movies/adventure/star-wars-I.jpg",
@@ -71,40 +73,6 @@ const actionMovies = document.getElementById("action-movies");
 const adventureImg = document.getElementById("adventure-image");
 const actionImg = document.getElementById("action-image");
 
-// ADVENTURE FUNCTIONS
-function adventureShowMovieImage(){
-    adventureImg.src = adventuresMoviesImages[adventureMoviesImagesIndex];
-    console.log(adventureImg);
-};
-
-function adventureHideForwardArrow(){
-    const ehAUltimaImagem = adventureMoviesImagesIndex !== 0 && adventureMoviesImagesIndex === adventuresMoviesImages.length - 1;
-    if(ehAUltimaImagem){
-        adventureForwardArrow.classList.add("opacity");
-    }else{
-        adventureForwardArrow.classList.remove("opacity");
-    }
-};
-
-function adventureHideBackArrow(){
-    const naoEhAPrimeiraImagem = adventureMoviesImagesIndex !== 0
-    if(naoEhAPrimeiraImagem){
-        adventureBackArrow.classList.remove("opacity");
-    }else{
-        adventureBackArrow.classList.add("opacity");
-    };
-};
-
-function adventureChangeBackgroundImage(){
-    if(adventureMoviesImagesIndex === 11){
-        adventureMovies.style.backgroundImage = "url(./src/images/background-movies/hobbit.jpg)";
-    }else if(adventureMoviesImagesIndex === 10){
-        adventureMovies.style.backgroundImage = "url(./src/images/background-movies/death-star.jpg)";
-    }else{
-        return;
-    };
-};
-
 // ADDEVENTLISTENNER
 adventureBackArrow.addEventListener('click', () => {
     if(adventureMoviesImagesIndex === 0){
@@ -133,40 +101,6 @@ adventureForwardArrow.addEventListener('click', () => {
     adventureHideBackArrow();
     adventureChangeBackgroundImage();
 });
-
-// ACTION FUNCTIONS
-function actionShowMovieImage(){
-    actionImg.src = actionsMoviesImages[actionMoviesImagesIndex];
-    console.log(actionImg);
-};
-
-function actionHideForwardArrow(){
-    const ehAUltimaImagem = actionMoviesImagesIndex !== 0 && actionMoviesImagesIndex === actionsMoviesImages.length - 1;
-    if(ehAUltimaImagem){
-        actionForwardArrow.classList.add("opacity");
-    }else{
-        actionForwardArrow.classList.remove("opacity");
-    }
-};
-
-function actionHideBackArrow(){
-    const naoEhAPrimeiraImagem = actionMoviesImagesIndex !== 0
-    if(naoEhAPrimeiraImagem){
-        actionBackArrow.classList.remove("opacity");
-    }else{
-        actionBackArrow.classList.add("opacity");
-    };
-};
-
-// function actionChangeBackgroundImage(){
-//     if(actionMoviesImagesIndex === 11){
-//         adventureMovies.style.backgroundImage = "url(./src/images/background-movies/hobbit.jpg)";
-//     }else if(adventureMoviesImagesIndex === 10){
-//         adventureMovies.style.backgroundImage = "url(./src/images/background-movies/death-star.jpg)";
-//     }else{
-//         return;
-//     };
-// };
 
 // ADDEVENTLISTENNER
 actionBackArrow.addEventListener('click', () => {
