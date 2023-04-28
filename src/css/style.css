@@ -78,7 +78,7 @@ span{
 
 /* ADVENTURE MOVIES */
 .adventure-movies{
-    background: url(../images/background-movies/death-star.jpg) no-repeat;
+    background: url(../images/background-movies/hobbit.jpg) no-repeat;
     background-size: cover;
 }
 
@@ -87,7 +87,12 @@ span{
     background-size: cover;
 }
 
-.adventure-movies, .action-movies{
+.science-fiction-movies{
+    background: url(../images/background-movies/death-star.jpg) no-repeat;
+    background-size: cover;
+}
+
+.adventure-movies, .action-movies, .science-fiction-movies{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,13 +104,13 @@ span{
     transition: 0.5s ease-in-out;
 }
 
-.adventure-slider, .action-slider{
+.adventure-slider, .action-slider, .science-fiction-slider{
     position: absolute;
     display: flex;
     gap: 5rem;
 }
 
-.adventure-image, .action-image{
+.adventure-image, .action-image, .science-fiction-image{
     width: 16rem;
     height: 22rem;
 }

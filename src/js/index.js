@@ -2,17 +2,6 @@ import {showMovieImage, hideForwardArrow, hideBackArrow, changeBackgroundAdventu
 
 // MOVIES IMAGE ARRAY
 const adventuresMoviesImages = [
-    "./src/images/movies/adventure/star-wars-I.jpg",
-    "./src/images/movies/adventure/star-wars-II.jpg",
-    "./src/images/movies/adventure/star-wars-III.jpg",
-    "./src/images/movies/adventure/star-wars-IV.jpg",
-    "./src/images/movies/adventure/star-wars-han-solo.jpg",
-    "./src/images/movies/adventure/star-wars-rogue-one.jpg",
-    "./src/images/movies/adventure/star-wars-V.png",
-    "./src/images/movies/adventure/star-wars-VI.jpg",
-    "./src/images/movies/adventure/star-wars-VII.jpg",
-    "./src/images/movies/adventure/star-wars-VIII.jpg",
-    "./src/images/movies/adventure/star-wars-IX.jpg",
     "./src/images/movies/adventure/Hobbit-1.jpg",
     "./src/images/movies/adventure/hobbit-2.jpg",
     "./src/images/movies/adventure/hobbit-3.jpg",
@@ -55,15 +44,32 @@ const actionMoviesImages = [
     "./src/images/movies/action/thor-4.jpg"
 ];
 
+const scienceFictionMoviesImages = [
+    "./src/images/movies/adventure/star-wars-I.jpg",
+    "./src/images/movies/adventure/star-wars-II.jpg",
+    "./src/images/movies/adventure/star-wars-III.jpg",
+    "./src/images/movies/adventure/star-wars-IV.jpg",
+    "./src/images/movies/adventure/star-wars-han-solo.jpg",
+    "./src/images/movies/adventure/star-wars-rogue-one.jpg",
+    "./src/images/movies/adventure/star-wars-V.png",
+    "./src/images/movies/adventure/star-wars-VI.jpg",
+    "./src/images/movies/adventure/star-wars-VII.jpg",
+    "./src/images/movies/adventure/star-wars-VIII.jpg",
+    "./src/images/movies/adventure/star-wars-IX.jpg",
+]
+
 // INDEX
 let adventureMoviesImagesIndex = 0;
 let actionMoviesImagesIndex = 0;
+let scienceFictionImagesIndex = 0;
 
 // ARROWS
 const adventureBackArrow = document.getElementById("back-arrow");
 const adventureForwardArrow = document.getElementById("forward-arrow");
 const actionBackArrow = document.getElementById("back-arrow-1");
 const actionForwardArrow = document.getElementById("forward-arrow-1");
+const scienceFictionBackArrow = document.getElementById("back-arrow-2");
+const scienceFictionForwardArrow = document.getElementById("forward-arrow-2");
 
 // MOVIES
 const adventureMovies = document.getElementById("adventure-movies");
@@ -72,6 +78,7 @@ const adventureMovies = document.getElementById("adventure-movies");
 // IMG
 const adventureImg = document.getElementById("adventure-image");
 const actionImg = document.getElementById("action-image");
+const scienceFictionImg = document.getElementById("science-fiction-image");
 
 // ADDEVENTLISTENNER - ADVENTURE
 adventureBackArrow.addEventListener('click', () => {
@@ -131,6 +138,36 @@ actionForwardArrow.addEventListener('click', () => {
     // actionChangeBackgroundImage();
 });
 
+// ADDEVENTLISTENNER - SCIENCE FICTION
+scienceFictionBackArrow.addEventListener('click', () => {
+    if(scienceFictionImagesIndex === 0){
+        return;
+    };
+
+    scienceFictionImagesIndex --;
+    console.log(scienceFictionImagesIndex);
+
+    showMovieImage(scienceFictionImg, scienceFictionMoviesImages, scienceFictionImagesIndex);
+    hideBackArrow(scienceFictionImagesIndex, scienceFictionBackArrow);
+    hideForwardArrow(scienceFictionImagesIndex, scienceFictionMoviesImages, scienceFictionForwardArrow);
+    // actionChangeBackgroundImage();
+});
+
+scienceFictionForwardArrow.addEventListener('click', () => {
+    if(scienceFictionImagesIndex === scienceFictionMoviesImages.length - 1){
+        return;
+    };
+
+    scienceFictionImagesIndex ++;
+    console.log(scienceFictionImagesIndex);
+
+    showMovieImage(scienceFictionImg, scienceFictionMoviesImages, scienceFictionImagesIndex);
+    hideForwardArrow(scienceFictionImagesIndex, scienceFictionMoviesImages, scienceFictionForwardArrow);
+    hideBackArrow(scienceFictionImagesIndex, scienceFictionBackArrow);
+    // actionChangeBackgroundImage();
+});
+
 // SHOW INITIAL IMAGES
 showMovieImage(adventureImg, adventuresMoviesImages, adventureMoviesImagesIndex);
 showMovieImage(actionImg, actionMoviesImages, actionMoviesImagesIndex);
+showMovieImage(scienceFictionImg, scienceFictionMoviesImages, scienceFictionImagesIndex);
