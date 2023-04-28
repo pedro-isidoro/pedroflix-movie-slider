@@ -44,10 +44,11 @@ span{
 
 .header .menu li a{
     padding: 0.8rem 1.2rem;
+    color: var(--light-red-color);
 }
 
 .header .menu li a:hover{
-    color: var(--dark-red-color);
+    color: var(--white-color);
     background-color: #312260;
     border-radius: 2rem;
 }
