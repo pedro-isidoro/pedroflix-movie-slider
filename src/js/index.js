@@ -1,4 +1,4 @@
-import {showMovieImage, hideForwardArrow, hideBackArrow, changeBackgroundAdventureImage} from './functions.js'
+import {showMovieImage, hideForwardArrow, hideBackArrow, changeBackgroundScienceFictionImage} from './functions.js'
 
 // MOVIES IMAGE ARRAY
 const adventuresMoviesImages = [
@@ -45,17 +45,21 @@ const actionMoviesImages = [
 ];
 
 const scienceFictionMoviesImages = [
-    "./src/images/movies/adventure/star-wars-I.jpg",
-    "./src/images/movies/adventure/star-wars-II.jpg",
-    "./src/images/movies/adventure/star-wars-III.jpg",
-    "./src/images/movies/adventure/star-wars-IV.jpg",
-    "./src/images/movies/adventure/star-wars-han-solo.jpg",
-    "./src/images/movies/adventure/star-wars-rogue-one.jpg",
-    "./src/images/movies/adventure/star-wars-V.png",
-    "./src/images/movies/adventure/star-wars-VI.jpg",
-    "./src/images/movies/adventure/star-wars-VII.jpg",
-    "./src/images/movies/adventure/star-wars-VIII.jpg",
-    "./src/images/movies/adventure/star-wars-IX.jpg",
+    "./src/images/movies/science-fiction/star-wars-I.jpg",
+    "./src/images/movies/science-fiction/star-wars-II.jpg",
+    "./src/images/movies/science-fiction/star-wars-III.jpg",
+    "./src/images/movies/science-fiction/star-wars-IV.jpg",
+    "./src/images/movies/science-fiction/star-wars-han-solo.jpg",
+    "./src/images/movies/science-fiction/star-wars-rogue-one.jpg",
+    "./src/images/movies/science-fiction/star-wars-V.png",
+    "./src/images/movies/science-fiction/star-wars-VI.jpg",
+    "./src/images/movies/science-fiction/star-wars-VII.jpg",
+    "./src/images/movies/science-fiction/star-wars-VIII.jpg",
+    "./src/images/movies/science-fiction/star-wars-IX.jpg",
+    "./src/images/movies/science-fiction/matrix.jpg",
+    "./src/images/movies/science-fiction/matrix-2.jpg",
+    "./src/images/movies/science-fiction/matrix-3.jpg",
+    "./src/images/movies/science-fiction/matrix-4.jpg"
 ]
 
 // INDEX
@@ -72,8 +76,9 @@ const scienceFictionBackArrow = document.getElementById("back-arrow-2");
 const scienceFictionForwardArrow = document.getElementById("forward-arrow-2");
 
 // MOVIES
-const adventureMovies = document.getElementById("adventure-movies");
+// const adventureMovies = document.getElementById("adventure-movies");
 // const actionMovies = document.getElementById("action-movies");
+const scienceFictionMovies = document.getElementById("science-fiction-movies");
 
 // IMG
 const adventureImg = document.getElementById("adventure-image");
@@ -92,7 +97,7 @@ adventureBackArrow.addEventListener('click', () => {
     showMovieImage(adventureImg, adventuresMoviesImages, adventureMoviesImagesIndex);
     hideBackArrow(adventureMoviesImagesIndex, adventureBackArrow);
     hideForwardArrow(adventureMoviesImagesIndex, adventuresMoviesImages, adventureForwardArrow);
-    changeBackgroundAdventureImage(adventureMoviesImagesIndex, adventureMovies);
+    // changeBackgroundAdventureImage(adventureMoviesImagesIndex, adventureMovies);
 });
 
 adventureForwardArrow.addEventListener('click', () => {
@@ -106,7 +111,7 @@ adventureForwardArrow.addEventListener('click', () => {
     showMovieImage(adventureImg, adventuresMoviesImages, adventureMoviesImagesIndex);
     hideForwardArrow(adventureMoviesImagesIndex, adventuresMoviesImages, adventureForwardArrow);
     hideBackArrow(adventureMoviesImagesIndex, adventureBackArrow);
-    changeBackgroundAdventureImage(adventureMoviesImagesIndex, adventureMovies);
+    // changeBackgroundAdventureImage(adventureMoviesImagesIndex, adventureMovies);
 });
 
 // ADDEVENTLISTENNER - ACTION
@@ -121,7 +126,6 @@ actionBackArrow.addEventListener('click', () => {
     showMovieImage(actionImg, actionMoviesImages, actionMoviesImagesIndex);
     hideBackArrow(actionMoviesImagesIndex, actionBackArrow);
     hideForwardArrow(actionMoviesImagesIndex, actionMoviesImages, actionForwardArrow);
-    // actionChangeBackgroundImage();
 });
 
 actionForwardArrow.addEventListener('click', () => {
@@ -135,7 +139,6 @@ actionForwardArrow.addEventListener('click', () => {
     showMovieImage(actionImg, actionMoviesImages, actionMoviesImagesIndex);
     hideForwardArrow(actionMoviesImagesIndex, actionMoviesImages, actionForwardArrow);
     hideBackArrow(actionMoviesImagesIndex, actionBackArrow);
-    // actionChangeBackgroundImage();
 });
 
 // ADDEVENTLISTENNER - SCIENCE FICTION
@@ -150,7 +153,7 @@ scienceFictionBackArrow.addEventListener('click', () => {
     showMovieImage(scienceFictionImg, scienceFictionMoviesImages, scienceFictionImagesIndex);
     hideBackArrow(scienceFictionImagesIndex, scienceFictionBackArrow);
     hideForwardArrow(scienceFictionImagesIndex, scienceFictionMoviesImages, scienceFictionForwardArrow);
-    // actionChangeBackgroundImage();
+    changeBackgroundScienceFictionImage(scienceFictionImagesIndex, scienceFictionMovies);
 });
 
 scienceFictionForwardArrow.addEventListener('click', () => {
@@ -164,7 +167,7 @@ scienceFictionForwardArrow.addEventListener('click', () => {
     showMovieImage(scienceFictionImg, scienceFictionMoviesImages, scienceFictionImagesIndex);
     hideForwardArrow(scienceFictionImagesIndex, scienceFictionMoviesImages, scienceFictionForwardArrow);
     hideBackArrow(scienceFictionImagesIndex, scienceFictionBackArrow);
-    // actionChangeBackgroundImage();
+    changeBackgroundScienceFictionImage(scienceFictionImagesIndex, scienceFictionMovies);
 });
 
 // SHOW INITIAL IMAGES

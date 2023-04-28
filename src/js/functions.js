@@ -22,9 +22,9 @@ function hideBackArrow(moviesImagesIndex, backArrow) {
   }
 }
 
-function changeBackgroundAdventureImage(index, slider) {
+function changeBackgroundScienceFictionImage(index, slider) {
   if (index === 11) {
-    slider.style.backgroundImage = "url(./src/images/background-movies/hobbit.jpg)";
+    slider.style.backgroundImage = "url(./src/images/background-movies/matrix-background.jpg)";
   } else if (index === 10) {
     slider.style.backgroundImage = "url(./src/images/background-movies/death-star.jpg)";
   } else {
@@ -32,4 +32,4 @@ function changeBackgroundAdventureImage(index, slider) {
   }
 }
 
-export {showMovieImage, hideForwardArrow, hideBackArrow, changeBackgroundAdventureImage};
+export {showMovieImage, hideForwardArrow, hideBackArrow, changeBackgroundScienceFictionImage};
