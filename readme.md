@@ -32,4 +32,8 @@ Conseguir fazer com que todos os carrosseis de imagens funcionem, alem de ativar
 <br><br>
 Solução: Colocar em um array os caminhos para as imagens, e criar uma função para colocar esses caminhos no src da tag img do HTML. Além de criar outras funções para esconder e mostrar as setas, e a background image quando e se necessário. 
 <br><br>
+Conseguir criar funções "genericas" e colocar em um arquivo .js apenas para as elas, e chamar no arquivo .js oficial.
+<br><br>
+Solução: Se ultilizar de parâmetros com nomes específicos e ...
+<br><br>
 Conseguir deixar a landing page de uma forma responsiva e de qualidade para os principais tamanhos de tela.
