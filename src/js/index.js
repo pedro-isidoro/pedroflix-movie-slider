@@ -1,4 +1,4 @@
-import {showMovieImage, hideForwardArrow, hideBackArrow, changeBackgroundScienceFictionImage} from './functions.js'
+import {showMovieImage, hideForwardArrow, hideBackArrow, changeBackgroundAdventureImage, changeBackgroundScienceFictionImage} from './functions.js'
 
 // MOVIES IMAGE ARRAY
 const adventuresMoviesImages = [
@@ -8,12 +8,12 @@ const adventuresMoviesImages = [
     "./src/images/movies/adventure/o-senhor-dos-aneis-1.jpg",
     "./src/images/movies/adventure/o-senhor-dos-aneis-2.jpg",
     "./src/images/movies/adventure/o-senhor-dos-aneis-3.jpg",
-    "./src/images/movies/adventure/jurassic-park-1",
-    "./src/images/movies/adventure/jurassic-park-2",
-    "./src/images/movies/adventure/jurassic-park-3",
-    "./src/images/movies/adventure/jurassic-world-1",
-    "./src/images/movies/adventure/jurassic-world-2",
-    "./src/images/movies/adventure/jurassic-world-3"
+    "./src/images/movies/adventure/jurassic-park-1.jpg",
+    "./src/images/movies/adventure/jurassic-park-2.jpg",
+    "./src/images/movies/adventure/jurassic-park-3.jpg",
+    "./src/images/movies/adventure/jurassic-world-1.jpg",
+    "./src/images/movies/adventure/jurassic-world-2.jpg",
+    "./src/images/movies/adventure/jurassic-world-3.jpg"
 ];
 
 const actionMoviesImages = [
@@ -82,7 +82,7 @@ const scienceFictionBackArrow = document.getElementById("back-arrow-2");
 const scienceFictionForwardArrow = document.getElementById("forward-arrow-2");
 
 // MOVIES
-// const adventureMovies = document.getElementById("adventure-movies");
+const adventureMovies = document.getElementById("adventure-movies");
 // const actionMovies = document.getElementById("action-movies");
 const scienceFictionMovies = document.getElementById("science-fiction-movies");
 
@@ -103,7 +103,7 @@ adventureBackArrow.addEventListener('click', () => {
     showMovieImage(adventureImg, adventuresMoviesImages, adventureMoviesImagesIndex);
     hideBackArrow(adventureMoviesImagesIndex, adventureBackArrow);
     hideForwardArrow(adventureMoviesImagesIndex, adventuresMoviesImages, adventureForwardArrow);
-    // changeBackgroundAdventureImage(adventureMoviesImagesIndex, adventureMovies);
+    changeBackgroundAdventureImage(adventureMoviesImagesIndex, adventureMovies);
 });
 
 adventureForwardArrow.addEventListener('click', () => {
@@ -117,7 +117,7 @@ adventureForwardArrow.addEventListener('click', () => {
     showMovieImage(adventureImg, adventuresMoviesImages, adventureMoviesImagesIndex);
     hideForwardArrow(adventureMoviesImagesIndex, adventuresMoviesImages, adventureForwardArrow);
     hideBackArrow(adventureMoviesImagesIndex, adventureBackArrow);
-    // changeBackgroundAdventureImage(adventureMoviesImagesIndex, adventureMovies);
+    changeBackgroundAdventureImage(adventureMoviesImagesIndex, adventureMovies);
 });
 
 // ADDEVENTLISTENNER - ACTION

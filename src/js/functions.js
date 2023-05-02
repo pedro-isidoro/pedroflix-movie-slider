@@ -22,6 +22,20 @@ function hideBackArrow(moviesImagesIndex, backArrow) {
   }
 }
 
+function changeBackgroundAdventureImage(index, slider) {
+  if (index === 6) {
+    slider.style.backgroundImage = "url(./src/images/background-movies/jurassic-park-background.jpg)";
+  } else if(index === 9){
+    slider.style.backgroundImage = "url(./src/images/background-movies/jurassic-world-background.jpg)";
+  } else if(index === 8){
+    slider.style.backgroundImage = "url(./src/images/background-movies/jurassic-park-background.jpg)";
+  } else if (index === 5) {
+    slider.style.backgroundImage = "url(./src/images/background-movies/hobbit.jpg)";
+  } else {
+    return;
+  }
+}
+
 function changeBackgroundScienceFictionImage(index, slider) {
   if (index === 11) {
     slider.style.backgroundImage = "url(./src/images/background-movies/matrix-background.jpg)";
@@ -32,4 +46,4 @@ function changeBackgroundScienceFictionImage(index, slider) {
   }
 }
 
-export {showMovieImage, hideForwardArrow, hideBackArrow, changeBackgroundScienceFictionImage};
+export {showMovieImage, hideForwardArrow, hideBackArrow, changeBackgroundAdventureImage, changeBackgroundScienceFictionImage};
