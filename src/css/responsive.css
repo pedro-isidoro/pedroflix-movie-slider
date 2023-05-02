@@ -24,7 +24,7 @@
 
 @media(max-width: 435px){
     /* CONTAINER */
-    .adventure-movies, .action-movies{
+    .adventure-movies, .action-movies, .science-fiction-movies{
         width: 36rem;
         height: 24rem;
     }
@@ -52,18 +52,29 @@
 
 @media(max-width: 398px){
     /* CONTAINER */
-    .adventure-movies, .action-movies{
+    .container .gener-title{
+        font-size: 2.2rem;
+    }
+
+    .adventure-movies, .action-movies, .science-fiction-movies{
         width: 32rem;
         height: 22rem;
     }
 
-    .adventure-slider, .action-slider{
+    .adventure-slider, .action-slider, .science-fiction-slider{
         gap: 4.6rem;
     }
 
-    .adventure-image, .action-image{
+    .adventure-image, .action-image, .science-fiction-image{
         width: 14rem;
         height: 20rem;
+    }
+
+    /* Footer */
+    .footer .footer-menu{
+        padding: 0 5.8rem;
+        flex-wrap: wrap; 
+        justify-content: center;
     }
 
     /* arrows */
@@ -73,20 +84,25 @@
     }
 }
 
-@media(max-width: 398px){
+@media(max-width: 360px){
     /* CONTAINER */
-    .adventure-movies, .action-movies{
+    .adventure-movies, .action-movies, .science-fiction-movies{
         width: 28rem;
         height: 19rem;
     }
 
-    .adventure-slider, .action-slider{
+    .adventure-slider, .action-slider, .science-fiction-slider{
         gap: 4rem;
     }
 
-    .adventure-image, .action-image{
+    .adventure-image, .action-image, .science-fiction-image{
         width: 12rem;
         height: 17rem;
+    }
+
+    /* Footer */
+    .footer .footer-menu{
+        padding: 0 5rem;
     }
 
     /* arrows */
