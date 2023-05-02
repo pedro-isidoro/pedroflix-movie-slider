@@ -5,8 +5,7 @@ Onde estarão carrosseis com imagens de filmes, em seus respectivos gêneros.
 <br>
 
 ## Projeto
-<img src='src/images/pedroflix-2.gif' alt='Gif do projeto'>
-<br>
+<img src='src/images/pedroflix.gif' alt='Gif do projeto'>
 <br>
 
 ## Objetivos
