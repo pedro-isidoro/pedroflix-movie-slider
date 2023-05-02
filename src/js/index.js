@@ -7,7 +7,13 @@ const adventuresMoviesImages = [
     "./src/images/movies/adventure/hobbit-3.jpg",
     "./src/images/movies/adventure/o-senhor-dos-aneis-1.jpg",
     "./src/images/movies/adventure/o-senhor-dos-aneis-2.jpg",
-    "./src/images/movies/adventure/o-senhor-dos-aneis-3.jpg"
+    "./src/images/movies/adventure/o-senhor-dos-aneis-3.jpg",
+    "./src/images/movies/adventure/jurassic-park-1",
+    "./src/images/movies/adventure/jurassic-park-2",
+    "./src/images/movies/adventure/jurassic-park-3",
+    "./src/images/movies/adventure/jurassic-world-1",
+    "./src/images/movies/adventure/jurassic-world-2",
+    "./src/images/movies/adventure/jurassic-world-3"
 ];
 
 const actionMoviesImages = [
