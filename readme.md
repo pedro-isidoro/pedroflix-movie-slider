@@ -33,6 +33,6 @@ Solução: Colocar em um array os caminhos para as imagens, e criar uma função
 <br><br>
 Conseguir criar funções "genericas" e colocar em um arquivo .js apenas para as elas, e chamar no arquivo .js oficial.
 <br><br>
-Solução: Se ultilizar de parâmetros com nomes específicos e ...
+Solução: Se ultilizar de parâmetros com nomes simples, porém bem autoexplicativos e quando chamados as variáveis "cairão como uma luva".
 <br><br>
 Conseguir deixar a landing page de uma forma responsiva e de qualidade para os principais tamanhos de tela.
